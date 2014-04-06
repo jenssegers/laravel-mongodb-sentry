@@ -11,6 +11,7 @@
     "license" : "MIT",
     "require": {
         "php": ">=5.3.0",
+        "cartalyst/sentry": "2.1.*",
         "jenssegers/mongodb": "*"
     },
     "autoload": {
