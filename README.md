@@ -41,6 +41,6 @@ To use the included MongoDB-enabled models, change the Sentry configuration mode
         'model' => 'Jenssegers\Mongodb\Sentry\Throttle',
 
     ),
-``
+```
 
 Or if you have a custom model, make sure it extends the correct model.
