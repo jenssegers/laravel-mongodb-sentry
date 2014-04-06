@@ -1,7 +1,7 @@
 Laravel MongoDB Sentry
 ======================
 
-Because Sentry's user model extends the original Eloquent model it could not be used with MongoDB. This package includes a User model that extends `Jenssegers\Mongodb\Model`.
+Because Sentry's models extends the original Eloquent model, it could not be used with MongoDB. This package includes models that extends `Jenssegers\Mongodb\Model` and thus support MongoDB.
 
 Installation
 ------------
