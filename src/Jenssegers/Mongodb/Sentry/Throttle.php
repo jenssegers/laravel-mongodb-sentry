@@ -271,7 +271,7 @@ class Throttle extends Model implements ThrottleInterface {
      */
     public function user()
     {
-        return $this->belongsTo('Cartalyst\Sentry\Users\Eloquent\User', 'user_id');
+        return $this->belongsTo('Jenssegers\Mongodb\Sentry\User', 'user_id');
     }
 
     /**

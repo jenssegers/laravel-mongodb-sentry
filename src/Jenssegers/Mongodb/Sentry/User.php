@@ -115,7 +115,7 @@ class User extends Model implements UserInterface {
      *
      * @var string
      */
-    protected static $groupModel = 'Cartalyst\Sentry\Groups\Eloquent\Group';
+    protected static $groupModel = 'Jenssegers\Mongodb\Sentry\Group';
 
     /**
      * The user groups pivot table name.
