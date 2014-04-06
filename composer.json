@@ -1,0 +1,21 @@
+{
+    "name": "jenssegers/mongodb-sentry",
+    "description": "An extension for Laravel-MongoDB that lets you work with Sentry",
+    "keywords": ["laravel","sentry","mongodb","mongo","authentication"],
+    "authors": [
+        {
+            "name": "Jens Segers",
+            "email": "hello@jenssegers.be"
+        }
+    ],
+    "license" : "MIT",
+    "require": {
+        "php": ">=5.3.0",
+        "jenssegers/mongodb": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Jenssegers\\Mongodb\\Sentry": "src/"
+        }
+    }
+}
