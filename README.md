@@ -8,13 +8,9 @@ Installation
 
 Make sure you have [jenssegers\mongodb](https://github.com/jenssegers/Laravel-MongoDB) installed before you continue.
 
-Add the package to your `composer.json` and run `composer update`.
+Install using composer:
 
-    {
-        "require": {
-            "jenssegers/mongodb-sentry": "*"
-        }
-    }
+    composer require jenssegers/mongodb-sentry
 
 For instructions on Sentry, check out https://cartalyst.com/manual/sentry/installation/laravel-4
 
