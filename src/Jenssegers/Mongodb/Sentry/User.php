@@ -528,6 +528,61 @@ class User extends Model implements UserInterface {
     }
 
     /**
+     * Updates the user to the given group(s).
+     *
+     * @param  \Illuminate\Database\Eloquent\Collection  $groups
+     * @param  bool  $remove
+     * @return bool
+     */
+    public function updateGroups($groups, $remove = true)
+    {
+        $newGroupIds = array();
+        $removeGroupIds = array();
+        $existingGroupIds = array();
+        foreach ($groups as $group)
+        {
+            if (is_object($group))
+            {
+                $newGroupIds[] = $group->getId();
+                if ( ! $this->addGroup($group))
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                $newGroupIds[] = $groups->getId();
+                if ( ! $this->addGroup($groups))
+                {
+                    return false;
+                }
+                break;
+            }
+        }
+        if ($remove)
+        {
+            foreach ($this->groups as $userGroup)
+            {
+                $existingGroupIds[] = $userGroup->getId();
+            }
+            $removeGroupIds = array_diff($existingGroupIds, $newGroupIds);
+            if ($removeGroupIds)
+            {
+                self::$groupProviderModel = self::$groupProviderModel ?: new GroupProvider;
+            }
+            foreach ($removeGroupIds as $id)
+            {
+                $group = self::$groupProviderModel->findById($id);
+                if ( ! $this->removeGroup($group))
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    /**
      * See if the user is in the given group.
      *
      * @param \Cartalyst\Sentry\Groups\GroupInterface  $group
