@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb\Sentry;
+<?php namespace Omt\Mongodb\Sentry;
 /**
  * Part of the Sentry package.
  *
@@ -21,7 +21,7 @@
 use Cartalyst\Sentry\Throttling\ThrottleInterface;
 use Cartalyst\Sentry\Throttling\UserSuspendedException;
 use Cartalyst\Sentry\Throttling\UserBannedException;
-use Jenssegers\Mongodb\Model;
+use Omt\Mongodb\Model;
 use DateTime;
 
 class Throttle extends Model implements ThrottleInterface {
@@ -271,7 +271,7 @@ class Throttle extends Model implements ThrottleInterface {
      */
     public function user()
     {
-        return $this->belongsTo('Jenssegers\Mongodb\Sentry\User', 'user_id');
+        return $this->belongsTo('Omt\Mongodb\Sentry\User', 'user_id');
     }
 
     /**

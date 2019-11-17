@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb\Sentry;
+<?php namespace Omt\Mongodb\Sentry;
 /**
  * Part of the Sentry package.
  *
@@ -21,7 +21,7 @@
 use Cartalyst\Sentry\Groups\NameRequiredException;
 use Cartalyst\Sentry\Groups\GroupExistsException;
 use Cartalyst\Sentry\Groups\GroupInterface;
-use Jenssegers\Mongodb\Model;
+use Omt\Mongodb\Model;
 
 class Group extends Model implements GroupInterface {
 
@@ -55,7 +55,7 @@ class Group extends Model implements GroupInterface {
      *
      * @var string
      */
-    protected static $userModel = 'Jenssegers\Mongodb\Sentry\User';
+    protected static $userModel = 'Omt\Mongodb\Sentry\User';
 
     /**
      * The user groups pivot table name.

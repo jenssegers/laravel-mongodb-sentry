@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb\Sentry;
+<?php namespace Omt\Mongodb\Sentry;
 /**
  * Part of the Sentry package.
  *
@@ -18,7 +18,7 @@
  * @link       http://cartalyst.com
  */
 
-use Jenssegers\Mongodb\Model;
+use Omt\Mongodb\Model;
 use Cartalyst\Sentry\Groups\GroupInterface;
 use Cartalyst\Sentry\Hashing\HasherInterface;
 use Cartalyst\Sentry\Users\LoginRequiredException;
@@ -115,7 +115,7 @@ class User extends Model implements UserInterface {
      *
      * @var string
      */
-    protected static $groupModel = 'Jenssegers\Mongodb\Sentry\Group';
+    protected static $groupModel = 'Omt\Mongodb\Sentry\Group';
 
     /**
      * The user groups pivot table name.
